@@ -13,7 +13,7 @@ const Instagram = ({ size = 20 }: { size?: number }) => (
 
 const posts = [
   { id: "1", img: "/images/494144329_1363487065168242_5157875639175839437_n.jpg", likes: 247, comments: 18, caption: "Acabamento perfeito com nossos tons exclusivos! ✨ #OutletDasTintas" },
-  { id: "2", img: "/images/506471047_1385476506302631_5846392490407798689_n.jpg", likes: 389, comments: 32, caption: "Mais um projeto impecável ganhando vida com nossas texturas premium 🏠" },
+  { id: "2", img: "/images/fachada.jpg", likes: 389, comments: 32, caption: "Mais um projeto impecável ganhando vida com nossas texturas premium 🏠" },
   { id: "3", img: "/images/515500690_1404195137764101_5837131583622663144_n.jpg", likes: 512, comments: 47, caption: "Cimento queimado aplicado com perfeição. Um toque de luxo para a sua casa 🎨" },
   { id: "4", img: "/images/515681942_1404206347762980_5054884243119633894_n.jpg", likes: 198, comments: 14, caption: "Preparação e qualidade lado a lado. #PinturaProfissional" },
   { id: "5", img: "/images/524059603_1416684353181846_5279449888484734062_n.jpg", likes: 304, comments: 23, caption: "Detalhes que fazem toda a diferença no resultado final ✨" },

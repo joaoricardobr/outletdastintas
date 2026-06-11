@@ -20,7 +20,7 @@ const testimonials = [
     project: "Residência Alphaville",
     quote: "O atendimento consultivo é o grande diferencial. Recebi uma verdadeira aula sobre tintas térmicas e texturas de luxo. A pintura de fachada resiste bravamente ao sol do sertão.",
     rating: 5,
-    thumbnail: "/images/506471047_1385476506302631_5846392490407798689_n.jpg",
+    thumbnail: "/images/fachada.jpg",
   },
   {
     id: "3",
