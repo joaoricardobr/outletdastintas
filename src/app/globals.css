@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ─────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold: #D4AF37;
+  --gold-dark: #AA7C11;
+  --green: #0F6A4A;
+  --black: #050505;
+  --graphite: #111111;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-dark: #AA7C11;
+  --color-green: #0F6A4A;
+  --color-black: #050505;
+  --color-graphite: #111111;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base Reset ─────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--black);
+  color: #fff;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background: var(--black);
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ─── Utility Classes ────────────────────────────────────────────────── */
+.gold-text {
+  background: linear-gradient(135deg, #fff 20%, var(--gold) 60%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-btn {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+.gold-btn:hover {
+  box-shadow: 0 0 32px rgba(212,175,55,0.45);
+  transform: translateY(-1px);
+}
+
+.glass {
+  background: rgba(17, 17, 17, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.glass-gold {
+  background: rgba(17, 17, 17, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212,175,55,0.14);
+}
+
+/* ─── Keyframes ──────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes wordReveal {
+  from { opacity: 0; transform: translateY(20px); filter: blur(6px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0);   }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(212,175,55,0); }
+}
+
+@keyframes scrollLine {
+  0%       { transform: translateY(-100%); opacity: 0; }
+  30%      { opacity: 1; }
+  100%     { transform: translateY(200%); opacity: 0; }
+}
+
+@keyframes loadBar {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+@keyframes ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* ─── Animation utility classes ──────────────────────────────────────── */
+.anim-fade-up   { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) both; }
+.anim-fade-in   { animation: fadeIn 0.8s ease both; }
+.anim-marquee   { animation: marquee 40s linear infinite; }
+.anim-load-bar  { animation: loadBar 1.4s ease-in-out infinite; }
+.anim-bounce    { animation: bounce 1.2s ease-in-out infinite; }
+.anim-ping      { animation: ping 1.4s cubic-bezier(0,0,0.2,1) infinite; }

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Outlet das Tintas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #050505;
+      color: #ccc;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Ambient Glows */
+    .glow-1 {
+      position: absolute;
+      left: 10%;
+      top: 15%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.05), transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .glow-2 {
+      position: absolute;
+      right: 10%;
+      top: 45%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(15,106,74,0.04), transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    /* Header styling */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(5, 5, 5, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 18px 0;
+      transition: padding 0.3s, background 0.3s;
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      padding: 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: rgba(212, 175, 55, 0.08);
+      display: flex;
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .logo-text span {
+      color: #D4AF37;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .logo-sub {
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      color: #666;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    nav a {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #999;
+      transition: color 0.25s;
+    }
+    nav a:hover {
+      color: #D4AF37;
+    }
+    .vip-btn {
+      padding: 8px 20px;
+      border-radius: 40px;
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      background: transparent;
+      transition: background 0.25s, color 0.25s;
+    }
+    .vip-btn:hover {
+      background: #D4AF37;
+      color: #000;
+    }
+
+    /* Hero section */
+    main {
+      padding: 140px 0 96px;
+      position: relative;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .blog-header {
+      margin-bottom: 64px;
+    }
+    .blog-label {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      font-weight: 600;
+    }
+    .blog-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 12px;
+      line-height: 1.2;
+    }
+    .blog-title span {
+      background: linear-gradient(135deg, #fff 10%, #D4AF37 60%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fillColor: transparent;
+      background-clip: text;
+    }
+    .blog-desc {
+      color: #777;
+      margin-top: 16px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    /* Grid of posts */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      border-radius: 16px;
+      background: rgba(17, 17, 17, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      border-color: rgba(212, 175, 55, 0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .card-img-container {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      background-color: #111;
+      overflow: hidden;
+    }
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85);
+      transition: transform 0.5s;
+    }
+    .card:hover .card-img {
+      transform: scale(1.05);
+    }
+    .card-content {
+      padding: 28px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      transition: color 0.3s;
+    }
+    .card:hover .card-title {
+      color: #D4AF37;
+    }
+    .card-excerpt {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .card-footer {
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: #555;
+    }
+    .card-link {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Footer */
+    footer {
+      background: #050505;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 48px 0;
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="logo-text">Outlet <span>das</span> Tintas</div>
+          <div class="logo-sub">Boutique Revestimentos</div>
+        </div>
+      </a>
+      <nav>
+        <a href="/#showroom">Showroom</a>
+        <a href="/#produtos">Produtos</a>
+        <a href="/#sobre">A Marca</a>
+        <a href="/#diferenciais">Diferenciais</a>
+        <a href="/blog">Blog</a>
+        <a href="/#depoimentos">Depoimentos</a>
+        <a href="/#contato" class="vip-btn">VIP</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <main>
+    <div class="container">
+      <div class="blog-header">
+        <span class="blog-label">Artigos Especializados</span>
+        <h1 class="blog-title">Blog da <span>Outlet das Tintas</span></h1>
+        <p class="blog-desc">Conteúdos ricos escritos por engenheiros, decoradores e aplicadores especialistas para orientar sua obra de alto padrão.</p>
+      </div>
+
+      <div class="grid">
+        <!-- Card 1 -->
+        <div class="card" onclick="window.location.href='/blog'">
+          <div class="card-img-container">
+            <img class="card-img" src="/images/abstract_paint.png" alt="Cimento Queimado">
+          </div>
+          <div class="card-content">
+            <div>
+              <span class="card-tag" style="color: #D4AF37;">Tendências 2025</span>
+              <h3 class="card-title">Cimento Queimado: O Acabamento que Domina os Projetos</h3>
+              <p class="card-excerpt">Conheça as variações de cimento queimado da Outlet das Tintas e como valorizar a arquitetura moderna.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-meta">
+                <span>08 Jun 2025</span>
+                <span>· 5 min</span>
+              </div>
+              <span class="card-link">Ler <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" onclick="window.location.href='/blog'">
+          <div class="card-img-container">
+            <img class="card-img" src="/images/luxury_villa.png" alt="Tinta Térmica">
+          </div>
+          <div class="card-content">
+            <div>
+              <span class="card-tag" style="color: #34D399;">Técnicas</span>
+              <h3 class="card-title">Tinta Térmica vs. Tinta Convencional: Qual Escolher?</h3>
+              <p class="card-excerpt">No clima quente de Petrolina, entenda as vantagens e o comparativo técnico de refletância molecular.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-meta">
+                <span>02 Jun 2025</span>
+                <span>· 4 min</span>
+              </div>
+              <span class="card-link">Ler <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" onclick="window.location.href='/blog'">
+          <div class="card-img-container">
+            <img class="card-img" src="/images/luxury_interior.png" alt="Paleta de cores">
+          </div>
+          <div class="card-content">
+            <div>
+              <span class="card-tag" style="color: #C084FC;">Paletas & Cores</span>
+              <h3 class="card-title">5 Paletas de Cores que Valorizam Mansões no Sertão</h3>
+              <p class="card-excerpt">A iluminação solar afeta a percepção. Listamos as cores terrosas e neutros que melhor combinam.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-meta">
+                <span>28 Mai 2025</span>
+                <span>· 6 min</span>
+              </div>
+              <span class="card-link">Ler <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Outlet das Tintas. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
