@@ -52,7 +52,7 @@ export default function InstagramGallery() {
 
         {/* follow CTA */}
         <div style={{ textAlign: "center", marginTop: 40 }}>
-          <a href="https://www.instagram.com/outletdastintas_" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.instagram.com/outletdastintasdovale" target="_blank" rel="noopener noreferrer"
             style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "13px 32px", borderRadius: 40, background: "linear-gradient(135deg,#833AB4,#FD1D1D,#F77737)", color: "#fff", textDecoration: "none", fontSize: 12, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", transition: "box-shadow 0.3s" }}
             onMouseEnter={e => ((e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px rgba(253,29,29,0.4)")}
             onMouseLeave={e => ((e.currentTarget as HTMLElement).style.boxShadow = "none")}>
@@ -67,8 +67,9 @@ export default function InstagramGallery() {
 function InstaPost({ post }: { post: typeof posts[0] }) {
   const [hov, setHov] = useState(false);
   return (
-    <div onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
-      style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", cursor: "pointer", borderRadius: 4 }}>
+    <a href="https://www.instagram.com/outletdastintasdovale" target="_blank" rel="noopener noreferrer"
+      onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+      style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", cursor: "pointer", borderRadius: 4, display: "block" }}>
       <Image src={post.img} alt={post.caption} fill style={{ objectFit: "cover", transition: "transform 0.5s", transform: hov ? "scale(1.08)" : "scale(1)" }} sizes="400px" />
       {/* hover overlay */}
       <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.62)", opacity: hov ? 1 : 0, transition: "opacity 0.3s", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 16, gap: 12 }}>
@@ -82,6 +83,6 @@ function InstaPost({ post }: { post: typeof posts[0] }) {
         </div>
         <p style={{ fontSize: 11, color: "rgba(255,255,255,0.8)", textAlign: "center", lineHeight: 1.5, maxWidth: 200 }}>{post.caption}</p>
       </div>
-    </div>
+    </a>
   );
 }
