@@ -102,7 +102,7 @@ export default function Footer() {
           <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
             {[
               { Icon: MapPin, title: "Showroom",               lines: ["Av. da Integração, 1554", "Dom Malan · Petrolina - PE", "CEP 56304-350"] },
-              { Icon: Phone,  title: "Canais Diretos",         lines: ["Tel: (87) 3024-7346", "WhatsApp: (87) 98888-0000"] },
+              { Icon: Phone,  title: "Canais Diretos",         lines: ["Tel / WhatsApp: (87) 3024-7346"] },
               { Icon: Clock,  title: "Horário de Atendimento", lines: ["Seg a Sex: 08:00 às 18:00", "Sábado: 08:00 às 12:00"] },
             ].map(({ Icon, title, lines }) => (
               <div key={title} style={{ display: "flex", gap: 16 }}>
