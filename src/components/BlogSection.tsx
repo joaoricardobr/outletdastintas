@@ -1,68 +1,9 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Clock, BookOpen, Tag } from "lucide-react";
-
-const posts = [
-  {
-    id: "1",
-    tag: "Tendências 2025",
-    tagColor: "#D4AF37",
-    title: "Cimento Queimado: O Acabamento que Domina os Projetos de Alto Padrão",
-    excerpt: "Entenda por que o cimento queimado se tornou o material favorito dos arquitetos de interiores mais premiados do Brasil — e como aplicar corretamente para evitar os erros mais comuns.",
-    readTime: "5 min",
-    date: "8 Jun 2025",
-    img: "/images/abstract_paint.png",
-    featured: true,
-  },
-  {
-    id: "2",
-    tag: "Técnicas",
-    tagColor: "#34D399",
-    title: "Tinta Térmica vs. Tinta Convencional: Qual Escolher para o Nordeste?",
-    excerpt: "No clima quente do sertão pernambucano, a escolha da tinta impacta diretamente no conforto térmico e na durabilidade da fachada. Veja o comparativo técnico completo.",
-    readTime: "4 min",
-    date: "2 Jun 2025",
-    img: "/images/luxury_villa.png",
-  },
-  {
-    id: "3",
-    tag: "Paletas & Cores",
-    tagColor: "#C084FC",
-    title: "5 Paletas de Cores que Transformam Ambientes Pequenos em Espaços Sofisticados",
-    excerpt: "A cor certa pode ampliar visualmente um cômodo, criar atmosferas de aconchego e valorizar o imóvel em até 15%. Conheça as combinações favoritas dos nossos consultores.",
-    readTime: "6 min",
-    date: "28 Mai 2025",
-    img: "/images/luxury_interior.png",
-  },
-  {
-    id: "4",
-    tag: "Impermeabilização",
-    tagColor: "#60A5FA",
-    title: "Infiltrações: Como Identificar, Tratar e Prevenir com Impermeabilizante Correto",
-    excerpt: "Manchas, bolhas e descascamento são sinais de alerta. Saiba como diagnosticar o tipo de infiltração e qual produto molecular usar para resolver de vez o problema.",
-    readTime: "7 min",
-    date: "20 Mai 2025",
-  },
-  {
-    id: "5",
-    tag: "Stucco & Texturas",
-    tagColor: "#F59E0B",
-    title: "Stucco Veneziano: A Arte Italiana que Chegou ao Sertão com Elegância Única",
-    excerpt: "O stucco veneziano é o acabamento de luxo mais versátil do mercado. Descubra as diferentes técnicas de aplicação, os níveis de brilho e os cuidados de manutenção.",
-    readTime: "5 min",
-    date: "14 Mai 2025",
-  },
-  {
-    id: "6",
-    tag: "Guia Prático",
-    tagColor: "#FB923C",
-    title: "Como Calcular Corretamente a Quantidade de Tinta para Sua Obra",
-    excerpt: "Erro na metragem gera desperdício ou falta de material no momento crítico. Aprenda a calcular com precisão usando a fórmula que nossos consultores utilizam diariamente.",
-    readTime: "3 min",
-    date: "7 Mai 2025",
-  },
-];
+import { blogData as posts } from "@/data/blog";
 
 export default function BlogSection() {
   const featured = posts[0];
@@ -127,33 +68,35 @@ export default function BlogSection() {
 function FeaturedCard({ post }: { post: typeof posts[0] }) {
   const [hov, setHov] = useState(false);
   return (
-    <div onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
-      style={{ borderRadius: 20, overflow: "hidden", cursor: "pointer", borderWidth: 1, borderStyle: "solid", borderColor: hov ? "rgba(212,175,55,0.28)" : "rgba(255,255,255,0.07)", transition: "border-color 0.3s, box-shadow 0.3s", boxShadow: hov ? "0 24px 60px rgba(0,0,0,0.5)" : "none", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}>
+    <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
+      <div onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+        style={{ borderRadius: 20, overflow: "hidden", cursor: "pointer", borderWidth: 1, borderStyle: "solid", borderColor: hov ? "rgba(212,175,55,0.28)" : "rgba(255,255,255,0.07)", transition: "border-color 0.3s, box-shadow 0.3s", boxShadow: hov ? "0 24px 60px rgba(0,0,0,0.5)" : "none", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}>
 
-      {/* image */}
-      <div style={{ position: "relative", minHeight: 280, overflow: "hidden" }}>
-        <Image src={post.img!} alt={post.title} fill style={{ objectFit: "cover", transition: "transform 0.6s", transform: hov ? "scale(1.05)" : "scale(1)", filter: "brightness(0.75)" }} sizes="600px" />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg,rgba(5,5,5,0.6),transparent)" }} />
-        <span style={{ position: "absolute", top: 20, left: 20, padding: "4px 12px", borderRadius: 40, background: post.tagColor + "22", borderWidth: 1, borderStyle: "solid", borderColor: post.tagColor + "55", color: post.tagColor, fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" }}>
-          ★ Destaque
-        </span>
-      </div>
+        {/* image */}
+        <div style={{ position: "relative", minHeight: 280, overflow: "hidden" }}>
+          <Image src={post.img!} alt={post.title} fill style={{ objectFit: "cover", transition: "transform 0.6s", transform: hov ? "scale(1.05)" : "scale(1)", filter: "brightness(0.75)" }} sizes="(max-width: 768px) 100vw, 600px" />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg,rgba(5,5,5,0.6),transparent)" }} />
+          <span style={{ position: "absolute", top: 20, left: 20, padding: "4px 12px", borderRadius: 40, background: post.tagColor + "22", borderWidth: 1, borderStyle: "solid", borderColor: post.tagColor + "55", color: post.tagColor, fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" }}>
+            ★ Destaque
+          </span>
+        </div>
 
-      {/* content */}
-      <div style={{ padding: "32px 36px", background: "rgba(17,17,17,0.85)", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20 }}>
-        <div>
-          <TagBadge tag={post.tag} color={post.tagColor} />
-          <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "clamp(18px,2vw,26px)", fontWeight: 700, color: "#fff", marginTop: 12, lineHeight: 1.3, transition: "color 0.3s", ...(hov ? { color: "#D4AF37" } : {}) }}>
-            {post.title}
-          </h3>
-          <p style={{ fontSize: 14, color: "#888", lineHeight: 1.7, marginTop: 14 }}>{post.excerpt}</p>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-          <Meta date={post.date} readTime={post.readTime} />
-          <ReadMore hov={hov} />
+        {/* content */}
+        <div style={{ padding: "32px 36px", background: "rgba(17,17,17,0.85)", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20 }}>
+          <div>
+            <TagBadge tag={post.tag} color={post.tagColor} />
+            <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "clamp(18px,2vw,26px)", fontWeight: 700, color: "#fff", marginTop: 12, lineHeight: 1.3, transition: "color 0.3s", ...(hov ? { color: "#D4AF37" } : {}) }}>
+              {post.title}
+            </h3>
+            <p style={{ fontSize: 14, color: "#888", lineHeight: 1.7, marginTop: 14 }}>{post.excerpt}</p>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
+            <Meta date={post.date} readTime={post.readTime} />
+            <ReadMore hov={hov} />
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -161,15 +104,17 @@ function FeaturedCard({ post }: { post: typeof posts[0] }) {
 function SmallCard({ post }: { post: typeof posts[0] }) {
   const [hov, setHov] = useState(false);
   return (
-    <div onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
-      style={{ padding: "20px 24px", borderRadius: 14, borderWidth: 1, borderStyle: "solid", borderColor: hov ? "rgba(212,175,55,0.25)" : "rgba(255,255,255,0.07)", background: "rgba(17,17,17,0.7)", cursor: "pointer", transition: "border-color 0.3s, background 0.3s, transform 0.3s", transform: hov ? "translateX(4px)" : "translateX(0)" }}>
-      <TagBadge tag={post.tag} color={post.tagColor} />
-      <h3 style={{ fontSize: 15, fontWeight: 700, color: hov ? "#D4AF37" : "#fff", marginTop: 10, lineHeight: 1.35, transition: "color 0.3s" }}>{post.title}</h3>
-      <div style={{ marginTop: 14, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <Meta date={post.date} readTime={post.readTime} />
-        <ArrowRight size={15} color={hov ? "#D4AF37" : "#555"} style={{ transition: "color 0.3s, transform 0.3s", transform: hov ? "translateX(4px)" : "none", flexShrink: 0 }} />
+    <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
+      <div onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+        style={{ padding: "20px 24px", borderRadius: 14, borderWidth: 1, borderStyle: "solid", borderColor: hov ? "rgba(212,175,55,0.25)" : "rgba(255,255,255,0.07)", background: "rgba(17,17,17,0.7)", cursor: "pointer", transition: "border-color 0.3s, background 0.3s, transform 0.3s", transform: hov ? "translateX(4px)" : "translateX(0)" }}>
+        <TagBadge tag={post.tag} color={post.tagColor} />
+        <h3 style={{ fontSize: 15, fontWeight: 700, color: hov ? "#D4AF37" : "#fff", marginTop: 10, lineHeight: 1.35, transition: "color 0.3s" }}>{post.title}</h3>
+        <div style={{ marginTop: 14, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <Meta date={post.date} readTime={post.readTime} />
+          <ArrowRight size={15} color={hov ? "#D4AF37" : "#555"} style={{ transition: "color 0.3s, transform 0.3s", transform: hov ? "translateX(4px)" : "none", flexShrink: 0 }} />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -177,15 +122,17 @@ function SmallCard({ post }: { post: typeof posts[0] }) {
 function GridCard({ post }: { post: typeof posts[0] }) {
   const [hov, setHov] = useState(false);
   return (
-    <div onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
-      style={{ padding: "24px 28px", borderRadius: 14, borderWidth: 1, borderStyle: "solid", borderColor: hov ? "rgba(212,175,55,0.22)" : "rgba(255,255,255,0.06)", background: "rgba(17,17,17,0.65)", cursor: "pointer", transition: "border-color 0.3s, transform 0.3s", transform: hov ? "translateY(-3px)" : "translateY(0)", position: "relative", overflow: "hidden" }}>
-      {/* top line sweep */}
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg,transparent,${post.tagColor},transparent)`, transform: hov ? "scaleX(1)" : "scaleX(0)", transition: "transform 0.4s" }} />
-      <TagBadge tag={post.tag} color={post.tagColor} />
-      <h3 style={{ fontSize: 15, fontWeight: 700, color: hov ? "#D4AF37" : "#fff", marginTop: 10, lineHeight: 1.35, transition: "color 0.3s", marginBottom: 10 }}>{post.title}</h3>
-      {post.excerpt && <p style={{ fontSize: 12, color: "#777", lineHeight: 1.6, marginBottom: 16 }}>{post.excerpt.slice(0, 90)}...</p>}
-      <Meta date={post.date} readTime={post.readTime} />
-    </div>
+    <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
+      <div onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+        style={{ padding: "24px 28px", borderRadius: 14, borderWidth: 1, borderStyle: "solid", borderColor: hov ? "rgba(212,175,55,0.22)" : "rgba(255,255,255,0.06)", background: "rgba(17,17,17,0.65)", cursor: "pointer", transition: "border-color 0.3s, transform 0.3s", transform: hov ? "translateY(-3px)" : "translateY(0)", position: "relative", overflow: "hidden", height: "100%" }}>
+        {/* top line sweep */}
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg,transparent,${post.tagColor},transparent)`, transform: hov ? "scaleX(1)" : "scaleX(0)", transition: "transform 0.4s" }} />
+        <TagBadge tag={post.tag} color={post.tagColor} />
+        <h3 style={{ fontSize: 15, fontWeight: 700, color: hov ? "#D4AF37" : "#fff", marginTop: 10, lineHeight: 1.35, transition: "color 0.3s", marginBottom: 10 }}>{post.title}</h3>
+        {post.excerpt && <p style={{ fontSize: 12, color: "#777", lineHeight: 1.6, marginBottom: 16 }}>{post.excerpt.slice(0, 90)}...</p>}
+        <Meta date={post.date} readTime={post.readTime} />
+      </div>
+    </Link>
   );
 }
 
