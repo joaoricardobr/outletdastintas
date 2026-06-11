@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ArrowRight, Trophy, Shield, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 
 function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
   const [val, setVal] = useState(0);

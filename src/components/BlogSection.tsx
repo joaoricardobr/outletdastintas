@@ -51,11 +51,9 @@ export default function BlogSection() {
 
         {/* CTA */}
         <div style={{ textAlign: "center", marginTop: 56 }}>
-          <a href="/blog" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", borderRadius: 40, borderWidth: 1, borderStyle: "solid", borderColor: "rgba(212,175,55,0.35)", background: "rgba(212,175,55,0.07)", color: "#D4AF37", textDecoration: "none", fontSize: 12, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", transition: "all 0.25s" }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(212,175,55,0.15)"; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(212,175,55,0.07)"; }}>
+          <Link href="/blog" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", borderRadius: 40, borderWidth: 1, borderStyle: "solid", borderColor: "rgba(212,175,55,0.35)", background: "rgba(212,175,55,0.07)", color: "#D4AF37", textDecoration: "none", fontSize: 12, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", transition: "all 0.25s" }}>
             <BookOpen size={15} /> Ver Todos os Artigos <ArrowRight size={14} />
-          </a>
+          </Link>
         </div>
       </div>
 
