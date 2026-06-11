@@ -41,7 +41,7 @@ export default function InstitutionalSection() {
 
         {/* Image */}
         <div style={{ position: "relative", borderRadius: 20, overflow: "hidden", aspectRatio: "4/5", border: "1px solid rgba(255,255,255,0.08)", boxShadow: "0 40px 100px rgba(0,0,0,0.5)" }}>
-          <Image src="/images/luxury_interior.png" alt="Interior Premium" fill style={{ objectFit: "cover" }} sizes="500px" />
+          <Image src="/images/fachada.jpg" alt="Fachada Premium" fill style={{ objectFit: "cover" }} sizes="500px" />
           <div style={{ position: "absolute", inset: 0, border: "1px solid rgba(212,175,55,0.15)", borderRadius: 20 }} />
           {/* floating tag */}
           <div style={{ position: "absolute", bottom: 24, left: 24, right: 24, padding: 20, background: "rgba(17,17,17,0.82)", backdropFilter: "blur(16px)", borderRadius: 12, border: "1px solid rgba(255,255,255,0.08)" }}>
