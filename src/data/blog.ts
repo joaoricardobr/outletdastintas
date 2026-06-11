@@ -9,7 +9,7 @@ export const blogData = [
     content: "O cimento queimado transcendeu seu início industrial para se tornar o acabamento predileto na arquitetura contemporânea de Petrolina e Juazeiro. Sua versatilidade permite que seja aplicado em pisos, paredes internas e até fachadas externas. No entanto, para alcançar o padrão de luxo exigido, a especificação do material é crucial. Nossa curadoria traz fórmulas enriquecidas com resinas elastoméricas que evitam fissuras e desbotamento causados pelo sol intenso da nossa região.\n\nDurante muito tempo, o cimento nativo ou 'queimado em obra' apresentava problemas como trincas de retração e eflorescência. Com a tecnologia dos novos microcimentos e texturas prontas da Outlet das Tintas, a aplicação torna-se rápida e o resultado é uma parede com relevos sutis, elegantes e, acima de tudo, resistente.",
     readTime: "5 min",
     date: "10 Jun 2026",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    img: "/images/blog/1.jpg",
     author: "Consultor Técnico Outlet",
   },
   {
@@ -22,7 +22,7 @@ export const blogData = [
     content: "O sol do Vale do São Francisco exige soluções que vão além do fator estético. As tintas térmicas de última geração atuam como escudos refletores de raios infravermelhos. Estudos demonstram que a aplicação de revestimentos elastoméricos térmicos da nossa linha premium pode reduzir a temperatura da superfície em até 8°C.\n\nEnquanto tintas convencionais apenas colorem e protegem superficialmente contra a chuva, a tinta com tecnologia térmica forma uma membrana elástica (elastômero) com microesferas de vidro oca. Estas microesferas agem como um espelho de calor, refletindo a energia solar de volta para a atmosfera.",
     readTime: "4 min",
     date: "05 Jun 2026",
-    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+    img: "/images/blog/2.jpg",
     author: "Eng. de Materiais Outlet",
   },
   {
@@ -35,7 +35,7 @@ export const blogData = [
     content: "A luz solar intensa do sertão pode 'lavar' tonalidades muito claras ou desbotar pigmentos instáveis. Recomendamos paletas com base em minerais nobres, cinzas aquecidos, beges aveludados e verdes profundos que se integram perfeitamente com a vegetação nativa e com revestimentos de pedra natural.\n\nPara transformar ambientes reduzidos, muitos acreditam que apenas o branco resolve. O 'Branco Neve', porém, pode tornar o espaço frio e clínico. Opte por um 'Gelo Suave' ou 'Areia' para aquecer o ambiente. Se quiser ousar, uma parede de destaque em tom terroso profundo cria uma percepção de profundidade.",
     readTime: "6 min",
     date: "01 Jun 2026",
-    img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    img: "/images/blog/3.jpg",
     author: "Designer de Interiores",
   },
   {
@@ -48,7 +48,7 @@ export const blogData = [
     content: "A umidade ascendente e a chuva forte repentina são os piores inimigos de uma pintura perfeita. A Outlet das Tintas trabalha com impermeabilizantes moleculares avançados que penetram nos poros dos materiais de construção, criando uma barreira intransponível à água, mas permitindo que a parede respire.\n\nIdentificar a fonte do problema é o passo crítico. Se a mancha vem rodapé, trata-se de umidade ascendente que demanda impermeabilização via cristalização do concreto ou argamassa polimérica cruzada.",
     readTime: "7 min",
     date: "28 Mai 2026",
-    img: "https://images.unsplash.com/photo-1585412727308-59c3f3a8b417?w=800&q=80",
+    img: "/images/blog/4.jpg",
     author: "Consultor Técnico",
   },
   {
@@ -61,7 +61,7 @@ export const blogData = [
     content: "Texturas à base de cal (Calce) trazem uma sofisticação sem igual aos ambientes. O Stucco Veneziano, originário dos palácios italianos, cria uma variação tonal sutil e natural à medida que a luz do sol incide sobre a parede ao longo do dia. Além disso, por serem minerais, são naturalmente resistentes a mofos.\n\nO grande diferencial do Stucco não é apenas a massa, mas a técnica. Com camadas finas sobrepostas e polimento final feito através da fricção intensa da desempenadeira de inox, a parede ganha um brilho espelhado que simula o mármore natural polido.",
     readTime: "5 min",
     date: "20 Mai 2026",
-    img: "https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&q=80",
+    img: "/images/blog/5.jpg",
     author: "Especialista em Acabamentos",
   },
   {
@@ -74,7 +74,7 @@ export const blogData = [
     content: "Mesmo a tinta mais cara do mundo parecerá comum se aplicada sobre uma parede mal preparada. Mas um erro logístico comum em obras de luxo é errar no cálculo da metragem. Comprar tintas colorizadas de lotes diferentes pode causar leves variações de tonalidade no meio da sua sala de estar.\n\nPara calcular com precisão: Meça a largura e altura de cada parede e multiplique. Some todas as áreas. Subtraia portas (aprox. 1,6m²) e janelas (aprox. 1,5m² a 2m²). O resultado é sua metragem quadrada total por demão.",
     readTime: "3 min",
     date: "15 Mai 2026",
-    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    img: "/images/blog/6.jpg",
     author: "Consultor Comercial",
   },
   {
@@ -87,7 +87,7 @@ export const blogData = [
     content: "A conexão com a natureza nunca esteve tão presente no design de interiores. Para 2026, as principais fabricantes mundiais elegeram tons que remetem à floresta, terra molhada e céus ao entardecer.\n\nNa Outlet das Tintas, já contamos com as bases e pigmentos para criar essas cores exatas. Um verde sálvia, por exemplo, traz frescor a escritórios e clínicas, reduzindo o estresse visual e criando um ambiente sofisticado quando combinado com metais dourados e madeira escura.",
     readTime: "4 min",
     date: "10 Mai 2026",
-    img: "https://images.unsplash.com/photo-1550581190-e22f2cb246d6?w=800&q=80",
+    img: "/images/blog/7.jpg",
     author: "Arquiteta Parceira",
   },
   {
@@ -100,7 +100,7 @@ export const blogData = [
     content: "A Textura Cristallo é a evolução dos acabamentos tradicionais. Sua fórmula contém cristais reflexivos que reagem à luz do sol e à iluminação artificial, criando um efeito de brilho diamantado extremamente requintado.\n\nDiferente do glitter comum, os microcristais são sutis e elegantes. O efeito é visto principalmente quando se caminha pelo ambiente. Além da estética inigualável, a Cristallo possui altíssima hidrorrepelência, blindando sua parede contra a água e poeira.",
     readTime: "5 min",
     date: "05 Mai 2026",
-    img: "https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&q=80",
+    img: "/images/blog/8.jpg",
     author: "Curadoria Outlet",
   },
   {
@@ -113,7 +113,7 @@ export const blogData = [
     content: "A textura aço corten foi a protagonista das últimas edições de mostras de arquitetura no Brasil. E não paramos por aí: as tintas metálicas chegaram para ficar.\n\nCompostas por pigmentos metálicos verdadeiros, essas tintas podem ser aplicadas em paredes, portas, móveis e estruturas metálicas. Um hall de entrada com uma parede em efeito ouro envelhecido transmite autoridade, luxo e personalidade. O segredo está na iluminação direcional focada (spots de LED) que acentua os reflexos metálicos da parede.",
     readTime: "4 min",
     date: "28 Abr 2026",
-    img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80",
+    img: "/images/blog/9.jpg",
     author: "Designer de Interiores",
   },
   {
@@ -126,7 +126,7 @@ export const blogData = [
     content: "Muitos clientes chegam à Outlet das Tintas pedindo Epóxi para pintar toda a casa. Embora seja extremamente resistente, o Epóxi não é a solução ideal para qualquer superfície.\n\nA Tinta Acrílica Premium é flexível, permite a transpiração da parede e possui excelente resistência aos raios UV, sendo ideal para alvenaria interna e externa. O Epóxi, por outro lado, é um sistema bicomponente altamente rígido e vitrificado. É a escolha definitiva para garagens, hospitais, banheiros e pisos industriais, mas pode amarelar ou craquelar se exposto excessivamente ao sol sem proteção UV.",
     readTime: "5 min",
     date: "20 Abr 2026",
-    img: "https://images.unsplash.com/photo-1581092523293-1811a2f6fb4c?w=800&q=80",
+    img: "/images/blog/10.jpg",
     author: "Engenheiro de Tintas",
   },
   {
@@ -139,7 +139,7 @@ export const blogData = [
     content: "O estilo minimalista busca a pureza das formas, mas isso não significa viver em um hospital. As tintas off-white (tons quase brancos, mas levemente pigmentados com amarelo, rosa ou marrom) são a chave para um minimalismo aconchegante.\n\nNa Outlet das Tintas, criamos variações de 'Crômio' e 'Algodão Egípcio' que refletem a luz natural com suavidade, eliminando o brilho ofuscante do branco puro. Esses tons neutros permitem que as texturas naturais dos móveis (madeira e linho) ganhem destaque absoluto na decoração.",
     readTime: "6 min",
     date: "14 Abr 2026",
-    img: "https://images.unsplash.com/photo-1598928506311-c55dd58c24c1?w=800&q=80",
+    img: "/images/blog/11.jpg",
     author: "Arquiteta de Interiores",
   },
   {
@@ -152,7 +152,7 @@ export const blogData = [
     content: "Um dos grandes desafios na escolha de tintas é a métrica CRI (Color Rendering Index) das suas lâmpadas. Um azul cobalto sob a luz do sol (luz branca de 5500K) parecerá vibrante e intenso. O mesmo azul sob uma lâmpada quente de 3000K pode adquirir tons esverdeados ou turvos.\n\nPor isso, no nosso Showroom em Petrolina, disponibilizamos simulações sob diferentes temperaturas de cor. Sempre recomendamos testar a cor na parede da sua casa, observando as mudanças de tonalidade da manhã até o final da tarde antes da pintura definitiva.",
     readTime: "5 min",
     date: "10 Abr 2026",
-    img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80",
+    img: "/images/blog/12.jpg",
     author: "Especialista em Iluminação",
   },
   {
@@ -165,7 +165,7 @@ export const blogData = [
     content: "A fachada da sua empresa é o seu cartão de visitas de 24 horas. Marcas de luxo investem pesado em acabamentos texturizados (como pedras naturais, aço corten ou preto fosco absoluto) porque transmitem solidez e exclusividade ao consumidor antes mesmo dele entrar.\n\nAlém das cores corporativas, uma fachada comercial exige resistência extrema contra vandalismo, solte poeira. A Outlet das Tintas oferece revestimentos de alto desempenho com tecnologia autolimpante, garantindo que sua marca pareça recém-pintada por muitos anos.",
     readTime: "4 min",
     date: "02 Abr 2026",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    img: "/images/blog/13.jpg",
     author: "Gestor Comercial",
   },
   {
@@ -178,7 +178,7 @@ export const blogData = [
     content: "A pintura de um quarto de bebê ou criança vai além da escolha de 'azul ou rosa'. As tintas para estes ambientes precisam obrigatoriamente ser à base d'água, sem cheiro (Low VOC) e ter propriedade anti-mofo duradoura.\n\nAs tendências de design apontam para uma paleta de tons pastéis secos — verdes menta, pêssegos acinzentados e azuis lavanda. Estas cores reduzem a agitação visual, facilitando a rotina de sono da criança, mas mantêm o ambiente alegre e acolhedor quando contrastados com móveis brancos ou amadeirados leves.",
     readTime: "4 min",
     date: "25 Mar 2026",
-    img: "https://images.unsplash.com/photo-1519710164239-ce1224878a2e?w=800&q=80",
+    img: "/images/blog/14.jpg",
     author: "Consultor de Vendas",
   },
   {
@@ -191,7 +191,7 @@ export const blogData = [
     content: "A madeira é um material nobre e vivo, que sofre muito com a radiação UV do Sertão. Para decks, portas e telhados externos, o uso de um Verniz tradicional pode resultar em craquelamentos em menos de 1 ano. A solução profissional é o Stain Impregnante.\n\nO Stain não forma película; ele penetra nas fibras da madeira, protegendo-a internamente contra fungos, cupins e repelindo a água, sem descascar. Já para móveis internos que precisam de cores laqueadas, os Esmaltes Poliuretanos (PU) de alto brilho ou fosco da nossa loja proporcionam um acabamento de fábrica, super liso e durável.",
     readTime: "5 min",
     date: "18 Mar 2026",
-    img: "https://images.unsplash.com/photo-1533090161767-e6ffedaca315?w=800&q=80",
+    img: "/images/blog/15.jpg",
     author: "Especialista em Madeiras",
   },
   {
@@ -204,7 +204,7 @@ export const blogData = [
     content: "O chamado 'Porcelanato Líquido' é, na verdade, uma resina de poliuretano ou epóxi autonivelante que cria uma superfície monolítica, sem qualquer emenda ou rejunte. Esse aspecto uniforme amplia visualmente o ambiente e facilita a limpeza, impedindo o acúmulo de sujeira e bactérias.\n\nDisponível em opções lisas de cores sólidas, metalizadas e até mesmo texturas 3D marmorizadas, essa tecnologia de ponta é aplicada diretamente sobre o contrapiso ou piso cerâmico existente, poupando quebra-quebra de obras. A Outlet das Tintas fornece kits completos para profissionais que exigem as melhores resinas do mercado.",
     readTime: "6 min",
     date: "12 Mar 2026",
-    img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+    img: "/images/blog/16.jpg",
     author: "Técnico em Resinas",
   },
   {
@@ -217,7 +217,7 @@ export const blogData = [
     content: "A pintura em tons escuros como o 'Preto Absoluto' ou o 'Azul Petróleo' tem sido a grande cartada de arquitetos arrojados. Uma parede preta no fundo de um cômodo não encolhe o espaço; na verdade, ela 'apaga' as extremidades, dando uma ilusão de profundidade infinita.\n\nContudo, paredes escuras exigem acabamento mate/fosco total. Brilhos e reflexos revelam qualquer imperfeição da alvenaria e destroem a sobriedade do escuro. Além disso, contrastar a parede negra com obras de arte vibrantes, espelhos e vegetação viva cria ambientes cinematográficos.",
     readTime: "5 min",
     date: "05 Mar 2026",
-    img: "https://images.unsplash.com/photo-1616489953149-166ee50a1e35?w=800&q=80",
+    img: "/images/blog/17.jpg",
     author: "Designer de Interiores",
   },
   {
@@ -230,7 +230,7 @@ export const blogData = [
     content: "O sucesso de uma pintura reside 80% na preparação e 20% no acabamento final. Não adianta investir na tinta de maior tecnologia do mundo se o reboco estiver esfarelando, desnivelado ou cheio de buracos.\n\nPara áreas internas secas, a massa corrida tradicional basta. Mas para banheiros, cozinhas, lavabos e toda a fachada externa, o uso de Massa Acrílica e Selador Acrílico Pigmentado é indispensável. A massa acrílica é dura e hidro-repelente. Na Outlet das Tintas, orientamos a compra do 'sistema de pintura completo', garantindo que o primer dialogue perfeitamente com a tinta de acabamento.",
     readTime: "4 min",
     date: "28 Fev 2026",
-    img: "https://images.unsplash.com/photo-1505389656123-d6861cb7e5e3?w=800&q=80",
+    img: "/images/blog/18.jpg",
     author: "Engenheiro Civil Parceiro",
   },
   {
@@ -243,7 +243,7 @@ export const blogData = [
     content: "A arquitetura biofílica busca reconectar as pessoas à natureza através do design de seus habitats. Tintas não precisam ser lisas e plastificadas. O uso de texturas rústicas que imitam arenito, barro batido e superfícies rochosas tem ganhado muita força.\n\nNossas linhas de texturas rústicas incluem compostos com minerais reais triturados que, além da estética natural maravilhosa, possuem alta resistência mecânica e durabilidade externa superior a 10 anos. Combinados com projetos de paisagismo e jardins verticais, criam verdadeiros oásis no clima árido do Vale.",
     readTime: "5 min",
     date: "20 Fev 2026",
-    img: "https://images.unsplash.com/photo-1478641300939-011400301389?w=800&q=80",
+    img: "/images/blog/19.jpg",
     author: "Especialista em Tendências",
   },
   {
@@ -256,7 +256,7 @@ export const blogData = [
     content: "As cores têm um impacto psicológico mensurável. Em ambientes corporativos, como clínicas e home offices, a pintura correta pode ser um investimento na produtividade e bem-estar. Tons azuis suaves reduzem o batimento cardíaco e promovem a concentração e tranquilidade, ideais para clínicas médicas.\n\nPor outro lado, detalhes em amarelo ou laranja em agências de marketing e espaços criativos estimulam o cérebro, promovem energia e sociabilidade. Na Outlet das Tintas, nosso setor de consultoria ajuda empresas a codificarem sua cultura organizacional diretamente nas paredes de seus edifícios de forma sofisticada e estratégica.",
     readTime: "6 min",
     date: "14 Fev 2026",
-    img: "https://images.unsplash.com/photo-1497366754045-812e9b8676fa?w=800&q=80",
+    img: "/images/blog/20.jpg",
     author: "Consultor Corporativo",
   }
 ];
