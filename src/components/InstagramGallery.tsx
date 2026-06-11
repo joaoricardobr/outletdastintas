@@ -12,12 +12,14 @@ const Instagram = ({ size = 20 }: { size?: number }) => (
 );
 
 const posts = [
-  { id: "1", img: "/images/luxury_interior.png", likes: 247, comments: 18, caption: "Acabamento cimento queimado — Projeto exclusivo Petrolina ✨ #OutletDasTintas" },
-  { id: "2", img: "/images/luxury_villa.png",    likes: 389, comments: 32, caption: "Fachada renovada com tinta térmica premium 🏠 #AcabamentosDeGrife" },
-  { id: "3", img: "/images/abstract_paint.png",  likes: 512, comments: 47, caption: "Paleta exclusiva desenvolvida com a Arq. Mariana Lins 🎨 #Consultoria" },
-  { id: "4", img: "/images/luxury_interior.png", likes: 198, comments: 14, caption: "Stucco veneziano aplicado em sala de jantar de alto padrão ✨" },
-  { id: "5", img: "/images/luxury_villa.png",    likes: 304, comments: 23, caption: "Antes e depois — transformação completa em 5 dias 🏡" },
-  { id: "6", img: "/images/abstract_paint.png",  likes: 441, comments: 36, caption: "Textura graffiato com efeito pedra natural — resultado incrível 🪨" },
+  { id: "1", img: "/images/494144329_1363487065168242_5157875639175839437_n.jpg", likes: 247, comments: 18, caption: "Acabamento perfeito com nossos tons exclusivos! ✨ #OutletDasTintas" },
+  { id: "2", img: "/images/506471047_1385476506302631_5846392490407798689_n.jpg", likes: 389, comments: 32, caption: "Mais um projeto impecável ganhando vida com nossas texturas premium 🏠" },
+  { id: "3", img: "/images/515500690_1404195137764101_5837131583622663144_n.jpg", likes: 512, comments: 47, caption: "Cimento queimado aplicado com perfeição. Um toque de luxo para a sua casa 🎨" },
+  { id: "4", img: "/images/515681942_1404206347762980_5054884243119633894_n.jpg", likes: 198, comments: 14, caption: "Preparação e qualidade lado a lado. #PinturaProfissional" },
+  { id: "5", img: "/images/524059603_1416684353181846_5279449888484734062_n.jpg", likes: 304, comments: 23, caption: "Detalhes que fazem toda a diferença no resultado final ✨" },
+  { id: "6", img: "/images/635183609_1604803877703225_3328793558156298940_n.jpg", likes: 441, comments: 36, caption: "Tons terrosos trazendo aconchego para a sala de jantar 🍂" },
+  { id: "7", img: "/images/636625450_1604803811036565_7702833217162871636_n.jpg", likes: 275, comments: 19, caption: "Nossos parceiros em ação! Resultados que impressionam 🚀" },
+  { id: "8", img: "/images/638307959_1604803914369888_7234531005674267332_n.jpg", likes: 312, comments: 27, caption: "Finalização de luxo com alto rendimento. Venha conhecer nosso showroom! 🖌️" },
 ];
 
 export default function InstagramGallery() {
@@ -35,7 +37,7 @@ export default function InstagramGallery() {
               <span style={{ background: "linear-gradient(135deg,#833AB4,#FD1D1D,#F77737)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Instagram</span>
             </h2>
           </div>
-          <a href="https://www.instagram.com/outletdastintas_" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.instagram.com/outletdastintasdovale" target="_blank" rel="noopener noreferrer"
             style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 22px", borderRadius: 40, borderWidth: 1, borderStyle: "solid", borderColor: "rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.05)", color: "#fff", textDecoration: "none", fontSize: 12, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", transition: "all 0.25s" }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.1)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.3)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.05)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.15)"; }}>
