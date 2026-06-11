@@ -134,9 +134,15 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: 28, display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 16, fontSize: 12, color: "#555" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Sparkles size={14} color="rgba(212,175,55,0.5)" />
-            <span>© {new Date().getFullYear()} Outlet das Tintas. Todos os direitos reservados.</span>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <Sparkles size={14} color="rgba(212,175,55,0.5)" />
+              <span>© {new Date().getFullYear()} Outlet das Tintas. Todos os direitos reservados.</span>
+            </div>
+            <span style={{ fontSize: 11, color: "#555" }}>
+              Desenvolvido por João Ricardo - Engenheiro da Computação{" "}
+              <a href="https://instagram.com/joaoricardo.pe" target="_blank" rel="noopener noreferrer" style={{ color: "#D4AF37", textDecoration: "none", fontWeight: 600 }}>@joaoricardo.pe</a>
+            </span>
           </div>
           <div style={{ display: "flex", gap: 20 }}>
             {["Política de Privacidade", "Termos de Uso"].map(l => (
